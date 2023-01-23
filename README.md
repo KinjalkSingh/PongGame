@@ -19,7 +19,7 @@ These classes would interact with each other to create the Pong game. The GamePa
 
 
 
-##GamePanel.java 
+#GamePanel.java 
  javax.swing package, which contains classes for creating graphical user interface (GUI) components such as buttons, labels, and panels.
  java.awt package, which contains classes for creating and manipulating graphical elements such as colors, fonts, and layouts.
  java.awt.event package, which contains classes for handling events in a GUI such as key presses and mouse clicks.
@@ -39,7 +39,7 @@ The sixteenth line creates an object of Paddles class and assigns to variable na
 The seventeenth line creates an object of Ball class and assigns to variable named ball.
 The eighteenth line creates an object of Scores class and assigns to variable named score, it also passed the GAME_WIDTH and GAME_HEIGHT as parameter.
 
-## GamePanel() - constructor of the GamePanel class
+#GamePanel() - constructor of the GamePanel class
 The first line defines the constructor of the GamePanel class. It is called when an object of the GamePanel class is created.
 The second line calls the newPaddles() method, which creates new paddle objects.
 The third line calls the newBall() method, which creates a new ball object.
@@ -49,14 +49,14 @@ The sixth line calls the setPreferredSize() method on the current GamePanel obje
 The seventh line creates a new Thread object and assigns it to the gameThread variable. The "this" keyword is passed as a parameter, which means the current GamePanel object is being used as the thread's target.
 The eigth line calls the start() method on the gameThread object, which starts the thread.
 
-##Threading 
+#Threading 
 In the code, line 7 creates a new Thread object and assigns it to the gameThread variable. The "this" keyword is passed as a parameter, which means the current GamePanel object is being used as the thread's target. The thread is started on line 8 by calling the start() method. This means that the GamePanel class's run() method, which is implemented by the Runnable interface, will be executed on a separate thread.
 When the GamePanel object is created, a separate thread is created and started by the constructor of the GamePanel class on line 7 and 8. This thread's target is the GamePanel object itself, which means that its run() method is executed on this separate thread.
 This separate thread is responsible for running the game loop. The game loop is a loop that updates the game's state, redraws the screen, and checks for user input and other events. This loop is executed repeatedly on the separate thread, which allows the game to run at a steady frame rate and provide a smooth user experience.
 So, the multiple threads in this code are the main thread and the thread created by the GamePanel constructor. The main thread is running the main method of the application and the thread created by the GamePanel constructor is running the game loop. Both threads are running simultaneously in a single process and share the resources of the application. The main thread is responsible for creating the GamePanel object and setting it up on the screen. The separate thread is responsible for updating the game's state and redrawing the screen.
 
 
-##Paddles.java
+#Paddles.java
 The first line imports the java.awt package, which contains classes for creating and manipulating graphical elements such as colors, fonts, and layouts.
 The second line imports the java.awt.event package, which contains classes for handling events in a GUI such as key presses and mouse clicks.
 The third line declares the Paddles class, which extends the Rectangle class, which is a basic class for creating rectangles with specified properties.
@@ -70,7 +70,7 @@ The tenth line defines the method keyReleased which takes in parameter of KeyEve
 The eleventh line defines the method setYDirection which takes in parameter of int i, it then sets the value of yVelocity to the passed value.
 The twelfth line defines the method move which updates the y position of the paddle based on the yVelocity.
 
-## setYDirection(int i) {
+# setYDirection(int i) {
 In simple terms, setYDirection method is used to set the speed and direction of the paddle's movement in y-axis and move method is used to update the position of the paddle on the screen based on the speed and direction set by setYDirection method.
 
 The first method, setYDirection(int i), is used to set the y-velocity of the paddle. The method takes in a single integer parameter, 'i', and assigns its value to the instance variable yVelocity. yVelocity is an integer variable that is used to store the movement speed of the paddle in the y-axis. By setting the value of yVelocity, we are controlling the speed and direction of the paddle's movement.
