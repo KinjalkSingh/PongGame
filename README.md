@@ -1,10 +1,29 @@
 # PongGame
 
+To make a Pong game in Java using the Java Swing library, we create 6 different classes:
+
+PongGame: This class would be the main class that runs the game and sets up the GameFrame, GamePanel, Paddles, Ball, and Scores.
+
+GameFrame: This class would extend JFrame and create the window for the game. It would also add the GamePanel to the frame.
+
+GamePanel: This class would extend JPanel and would be responsible for drawing the game elements (paddles, ball, and scores) on the screen.
+
+Paddles: This class would represent the paddles in the game and would have properties such as position, size, and movement.
+
+Ball: This class would represent the ball in the game and would have properties such as position, size, and movement.
+
+Scores: This class would keep track of the scores for each player and would have methods for updating and displaying the scores on the screen.
+
+These classes would interact with each other to create the Pong game. The GamePanel would use the Paddles and Ball classes to draw the game elements on the screen, and the PongGame class would use the GameFrame and GamePanel classes to set up and run the game.
+
+
+
+
 ##GamePanel.java 
-The first line imports the javax.swing package, which contains classes for creating graphical user interface (GUI) components such as buttons, labels, and panels.
-The second line imports the java.awt package, which contains classes for creating and manipulating graphical elements such as colors, fonts, and layouts.
-The third line imports the java.awt.event package, which contains classes for handling events in a GUI such as key presses and mouse clicks.
-The fourth line imports the java.util package, which contains the Random class used to generate random numbers.
+ javax.swing package, which contains classes for creating graphical user interface (GUI) components such as buttons, labels, and panels.
+ java.awt package, which contains classes for creating and manipulating graphical elements such as colors, fonts, and layouts.
+ java.awt.event package, which contains classes for handling events in a GUI such as key presses and mouse clicks.
+ java.util package, which contains the Random class used to generate random numbers.
 The fifth line declares the GamePanel class, which extends the JPanel class, which is a basic container for GUI components. It also implements the Runnable interface which allows the class to be executed as a separate thread.
 The sixth line creates a constant variable named GAME_WIDTH and assigns the value of 1000 to it.
 The seventh line creates a constant variable named GAME_HEIGHT and assigns the value of (GAME_WIDTH*(0.555)) to it.
