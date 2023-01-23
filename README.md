@@ -20,9 +20,9 @@ These classes would interact with each other to create the Pong game. The GamePa
 
 
 # GamePanel.java 
- javax.swing package, which contains classes for creating graphical user interface (GUI) components such as buttons, labels, and panels.
- java.awt package, which contains classes for creating and manipulating graphical elements such as colors, fonts, and layouts.
- java.awt.event package, which contains classes for handling events in a GUI such as key presses and mouse clicks.
+ In the class GamePanel we first import javax.swing package, which contains classes for creating graphical user interface (GUI) components such as buttons, labels, and panels. 
+ Also we import java.awt package, which contains classes for creating and manipulating graphical elements such as colors, fonts, and layouts.
+ Also Import java.awt.event package, which contains classes for handling events in a GUI such as key presses and mouse clicks.
  java.util package, which contains the Random class used to generate random numbers.
 The fifth line declares the GamePanel class, which extends the JPanel class, which is a basic container for GUI components. It also implements the Runnable interface which allows the class to be executed as a separate thread.
 The sixth line creates a constant variable named GAME_WIDTH and assigns the value of 1000 to it.
